@@ -1,18 +1,13 @@
 import sys
-
 input = sys.stdin.readline
-n = int(input().strip())
 
+n = int(input())
 if n == 1:
     print(1)
 elif n == 2:
     print(2)
-else: 
-    memo = [-1 for i in range(n+1)]
-    memo[1] = 1%15746
-    memo[2] = 2%15746
-
-    for i in range(3, n+1):
-        memo[i] = (memo[i-1] + memo[i-2])%15746
-
-    print(memo[n])
+else:
+    a, b = 1, 2
+    for _ in range(3, n + 1):
+        a, b = b, (a + b) % 15746
+    print(b)
