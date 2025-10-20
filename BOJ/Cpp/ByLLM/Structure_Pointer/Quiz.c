@@ -16,9 +16,6 @@ int main(void) {
 
     // TODO: sp가 s1을 가리키도록 하고,
     // 포인터로 age를 20으로 수정하세요.
-
-    sp = &s1;
-    sp->age = 20;
     
     printf("%s %d\n", s1.name, s1.age); // 출력: Alice 20
     return 0;
